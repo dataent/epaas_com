@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include epaas_com *.css
+recursive-include epaas_com *.csv
+recursive-include epaas_com *.html
+recursive-include epaas_com *.ico
+recursive-include epaas_com *.js
+recursive-include epaas_com *.json
+recursive-include epaas_com *.md
+recursive-include epaas_com *.png
+recursive-include epaas_com *.py
+recursive-include epaas_com *.svg
+recursive-include epaas_com *.txt
+recursive-exclude epaas_com *.pyc

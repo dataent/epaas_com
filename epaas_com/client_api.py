@@ -1,0 +1,35 @@
+
+from __future__ import unicode_literals
+import dataent
+from dataent import _
+
+
+@dataent.whitelist(allow_guest=True)
+def signup(full_name, email, subdomain, plan="Free"):
+	status = _signup(full_name, email, subdomain, plan=plan)
+
+	context = {
+		'pathname': 'schools/signup' if distribution=='schools' else 'signup'
+	}
+
+	if status == 'success':
+		location = dataent.redirect_to_message(_('Thank you for signing up'),
+			"""<div><p>You will receive an email at <strong>{}</strong>,
+			asking you to verify this account request.<br>
+			If you are unable to find the email in your inbox, please check your SPAM folder.
+			It may take a few minutes before you receive this email.</p>
+			<p>Once you click on the verification link, your account will be ready in a few minutes.</p>
+			</div>""".format(email), context=context)
+
+	elif status=='retry':
+		return {}
+
+	else:
+		# something went wrong
+		location = dataent.redirect_to_message(_('Something went wrong'),
+			'Please try again or drop an email to support@epaas.com',
+			context=context)
+
+	return {
+		'location': location
+}

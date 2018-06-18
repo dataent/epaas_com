@@ -1,0 +1,98 @@
+{% macro hero(title, subtitle, image, enable_free_plan) %}
+<div class="container-fluid section-block">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<h1 class="main-heading">
+					{{ title }}</h1>
+				<p class="lead text-muted">
+					{{ subtitle }}</p>
+				{% if enable_free_plan %}
+				<p class="mar-t-50 mar-b-0">
+					<a class="x-large blue-btn button later" href="/signup?plan=Free">
+					Sign Up — Free for 1 User</a>
+				</p>
+				<p class="mar-b-50">
+					<a href="/pricing" class="cl-light-gray">See plans and pricing</a>
+				</p>
+				{% else %}
+				<p class="mar-t-50 mar-b-50">
+					<a class="x-large blue-btn button later" href="/pricing">
+					Start a free 30-day trial</a>
+				</p>
+				{% endif %}
+				<div class="mar-t-70">
+					<div>
+						<img class="img-responsive screenshot feature-image"
+						src="{{ image }}">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endmacro %}
+
+{% macro feature(detail) %}
+	<div class="container-fluid bg-white section-block feature-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 text-center">
+					<h2 class="h2 text-capitalize">{{ detail.title }}</h2>
+					<p class="p">{{ detail.desc }}</p>
+				</div>
+				<div class="col-sm-12 text-center mar-t-40">
+					<img src="{{ detail.img }}" class="screenshot img-responsive"
+						alt="epaas screen" />
+					<p class='text-center text-extra-muted small'>Screenshot only shows how EPAAS can be used, does not have real data</p>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro testimonial(name, description, image) %}
+	<div class="container-fluid bg-gray section-block feature-section testimonial">
+		<div class="container">
+			<h2 class="text-center h2">Trusted by users across 150+ countries</h2>
+			<div class="row">
+				<div class="col-sm-8 testimonial-content">
+					<p class="p text-left">
+						{{ description }}
+					</p>
+
+				</div>
+				<div class="col-sm-4">
+					<p class="overflow-h text-center">
+						<img src="{{ image}}" class="img-responsive img-circle testimonial-img" style="width :150px; margin:0 auto;" />
+					</p>
+					<p class="testimonial_name text-center" style="width :150px; margin:0 auto;" >
+						{{ name }}
+					</p>
+				</div>
+
+			</div>
+			<p class="text-center small">
+				<a class="button btn-link" href="/reviews">Read more reviews...</a>
+			</p>
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro  render_plan(plan_name, users, emails, space, price) %}
+	<div class='col-sm-3'>
+		<div class='plan' data-plan-name='{{ plan_name }}'>
+			<div class='top-section plan-head'>
+				<p class='bold'> $ {{ price }}/year </p>
+				<p><b> {{ users }} Users </b></p>
+			</div>
+			<p>Emails: {{ emails }}</p>
+			<p>Space: {{ space }} GB</p>
+			<p>Functional Support</p>
+			<div class='trial'>
+				<button class="btn btn-primary" onclick="redirect_to_signup('signup', '{{ plan_name }}')" > Start Trial </button>
+			</div>
+		</div>
+	</div>
+{% endmacro %}
+

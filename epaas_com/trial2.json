@@ -1,0 +1,63 @@
+{
+ "accept_payment": 0, 
+ "allow_comments": 0, 
+ "allow_delete": 0, 
+ "allow_edit": 0, 
+ "allow_incomplete": 0, 
+ "allow_multiple": 0, 
+ "allow_print": 0, 
+ "amount": 0.0, 
+ "amount_based_on_field": 0, 
+ "creation": "2018-06-07 00:33:43.181855", 
+ "doc_type": "Site", 
+ "docstatus": 0, 
+ "doctype": "Web Form", 
+ "idx": 0, 
+ "introduction_text": "", 
+ "is_standard": 1, 
+ "login_required": 0, 
+ "max_attachment_size": 0, 
+ "modified": "2018-06-07 00:33:43.181855", 
+ "modified_by": "Administrator", 
+ "module": "Bench Manager", 
+ "name": "trial2", 
+ "owner": "Administrator", 
+ "payment_button_label": "Buy Now", 
+ "published": 1, 
+ "route": "trial2", 
+ "show_sidebar": 1, 
+ "sidebar_items": [], 
+ "success_url": "/trial2", 
+ "title": "trial2", 
+ "web_form_fields": [
+  {
+   "fieldname": "site_name", 
+   "fieldtype": "Data", 
+   "hidden": 0, 
+   "label": "Site Name", 
+   "max_length": 0, 
+   "max_value": 0, 
+   "read_only": 0, 
+   "reqd": 1
+  }, 
+  {
+   "default": "0", 
+   "fieldname": "install_epaas", 
+   "fieldtype": "Check", 
+   "hidden": 0, 
+   "label": "Install Erpnext", 
+   "max_length": 0, 
+   "max_value": 0, 
+   "read_only": 0, 
+   "reqd": 0
+  }, 
+  {
+   "fieldtype": "Attach", 
+   "hidden": 0, 
+   "max_length": 0, 
+   "max_value": 0, 
+   "read_only": 0, 
+   "reqd": 0
+  }
+ ]
+}

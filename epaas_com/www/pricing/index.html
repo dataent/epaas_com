@@ -1,0 +1,139 @@
+{% from "epaas_com/templates/includes/macros.html" import hero, render_plan %}
+<div class="container-fluid bg-white padd-0">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 epaas-pricing page-padding text-center">
+				<h1 class="main-heading">Take Full Control of Your Business</h1>
+				<p class="p">Start with a <b>free 30 day trial</b> now and upgrade to a <br>premium plan with more users &amp; storage and priority support.<br class="hidden-xs">
+				</p>
+				<hr class="col-sm-12">
+				<div class="col-sm-12 page-padding">
+					<h2 class="plan-title h2">Small &amp; Medium Business</h2>
+					<p class="p price">$12.5 <span class="small text-muted">/ user / month
+						<br>Minimum of 5 users, paid annually</span></p>
+					<div class="row text-left">
+						<div class="plan-detail col-sm-3">
+							<p><span class="indicator green"></span>Add User at $150/year</p>
+							<p><span class="indicator green"></span>All Modules</p>
+							<p><span class="indicator green"></span>5000 Emails</p>
+						</div>
+						<div class="plan-detail col-sm-3">
+							<p><span class="indicator green"></span>1GB Space/User</p>
+							<p><span class="indicator green"></span>All Domains</p>
+							<p><span class="indicator green"></span>Auto-Upgrades</p>
+						</div>
+						<div class="plan-detail col-sm-3">
+							<p><span class="indicator green"></span>Priority Support</p>
+							<p><span class="indicator green"></span>Automated Backups</p>
+							<p><span class="indicator green"></span>Custom Domain</p>
+						</div>
+						<div class="plan-detail col-sm-3">
+							<p><span class="indicator green"></span>Bug Fix Gaurantee</p>
+							<p><span class="indicator green"></span>Mobile App</p>
+						</div>
+					</div>
+					<br>
+					<a class="large blue button" onclick="redirect_to_signup('signup', 'P5-2018')">Start Trial</a>
+					<br>
+					<p style="margin-top: 20px;">
+						<a class="text-center" href="https://dataent.epaas.com/request-a-demo"><b>Request A Demo</b></a>
+					</p>
+				</div>
+				<div class="col-sm-12">
+					<div class="row">
+						<div class="col-xs-2 col-xs-offset-5 col-sm-2 col-xs-offset-5">
+							<hr class="col-sm-12">
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-12 page-padding">
+					<h2 class="plan-title h2">EPAAS For Enterprises</h2>
+					<p class="p">Contact Us for the Price</p>
+					<div class="row text-left">
+						<div class="plan-detail col-sm-3">
+							<p><span class="indicator green"></span>Unlimited Users</p>
+							<p><span class="indicator green"></span>All Modules</p>
+							<p><span class="indicator green"></span>Unlimited Emails</p>
+							<p><span class="indicator green"></span>Dedicated Engineer</p>
+						</div>
+						<div class="plan-detail col-sm-3">
+							<p><span class="indicator green"></span>Unlimited Space</p>
+							<p><span class="indicator green"></span>All Domains</p>
+							<p><span class="indicator green"></span>Auto-Upgrades</p>
+							<p><span class="indicator green"></span>Feature Development</p>
+						</div>
+						<div class="plan-detail col-sm-3">
+							<p><span class="indicator green"></span>Priority Support</p>
+							<p><span class="indicator green"></span>Automated Backups</p>
+							<p><span class="indicator green"></span>Custom Domain</p>
+							<p><span class="indicator green"></span>Custom Reports</p>
+						</div>
+						<div class="plan-detail col-sm-3">
+							<p><span class="indicator green"></span>Bug Fix Gaurantee</p>
+							<p><span class="indicator green"></span>Mobile App</p>
+							<p><span class="indicator green"></span>Custom Print Formats</p>
+						</div>
+					</div>
+					<br>
+					<a class="large blue button" href="/contact">Contact Us</a>
+					<br>
+					<p style="margin-top: 20px;">
+						<a class="text-center" href="https://dataent.epaas.com/request-a-demo"><b>Request A Demo</b></a>
+					</p>
+				</div>
+				<div class="col-sm-12">
+					<div class="row">
+						<div class="col-xs-2 col-xs-offset-5 col-sm-2 col-xs-offset-5">
+							<hr class="col-sm-12">
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-12 page-padding">
+					<p>
+						<a href="/pricing/payment"><b>Payment Options</b></a>
+						<br>
+					</p>
+					<p>
+						<a href="/benefits" style="margin-bottom: 10px; display: inline-block">
+							<b>Why choose EPAAS Hosting?</b>
+						</a>
+						<br>
+						<a href="/compare">
+							<b>Compare with other applications</b>
+						</a>
+					</p>
+				</div>
+				<hr class="col-sm-12">
+				<div class="col-sm-12 page-padding text-center">
+					<h1 class="h2">Self-Hosted</h1>
+					<p class="p">
+						EPAAS is open source and licenced under GNU GPL v3.<br>
+						It's free to use on your own server.
+					</p>
+					<br>
+					<a class="large blue button" style="margin: 5px" href="https://github.com/dataent/epaas" target="_blank">Github</a>
+					<a class="large blue button" style="margin: 5px" href="/download">Download VM</a>
+					<a class="large blue button" style="margin: 5px" href="https://github.com/dataent/bench" target="_blank">Install</a>
+				</div>
+
+				<hr class="col-sm-12">
+				<div class="col-sm-12 page-padding text-center">
+					<h1 class="h2">Paid Feature Development</h1>
+					<p class="p">
+						Missing a feature in EPAAS that you badly need?<br> Jump up its priority by sponsoring the feature.
+					</p>
+					<br>
+					<a class="large blue button" style="margin: 5px" href="/pricing/paid-feature-development" target="_blank">Learn More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	function redirect_to_signup(page, plan) {
+		var url = page + '?plan=' + plan;
+		// concat existing params to url
+		url = url + window.location.search.replace('?', '&');
+		window.location.href = url;
+	}
+</script>
